@@ -2,7 +2,7 @@
 // Add download icon
 //
 
-// Creaate the button if it doesnt exit
+// Create the button
 if(!document.getElementById('download_music')) {
 
 	// Creating and storing icon image
@@ -15,12 +15,12 @@ if(!document.getElementById('download_music')) {
 
 	// Finally, append element
 	btns.insertAdjacentHTML('beforeend', dl);
-}
 
-// Create script and inject
-var s = document.createElement('script');
-s.src = chrome.extension.getURL('download.js');
-s.onload = function() {
-	this.remove();
-};
-(document.head || document.documentElement).appendChild(s);
+	// Create script and inject
+	var s = document.createElement('script');
+	s.src = chrome.extension.getURL('download.js');
+	s.onload = function() {
+		this.remove();
+	};
+	(document.head || document.documentElement).appendChild(s);
+}
