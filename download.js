@@ -2,9 +2,9 @@
 document.getElementById("download_music").addEventListener("click", getObjects);
 
 function getObjects() {
-	var audioObjects = getAudioPlayer()._currentAudio[2];
+	var song = getAudioPlayer()._currentAudio[2];
 	
-	saveAs(audioObjects);
+	saveAs(song);
 }
 
 function saveAs(uri) {
