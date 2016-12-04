@@ -10,9 +10,17 @@ if(!document.getElementById('download_music')) {
 	var html = "<image src='" + imgURL + "'></image>"
 
 	//Create and find elements... ugly, I know
-	var dl = '<button id="download_music" class="audio_page_player_btn">' + html + '</button>';
+	var dl = '<button download id="download_music" class="audio_page_player_btn">' + html + '</button>';
 	var btns = document.getElementsByClassName("audio_page_player_btns")[0];
 
 	// Finally, append element
 	btns.insertAdjacentHTML('beforeend', dl);
 }
+
+// Create script and inject
+var s = document.createElement('script');
+s.src = chrome.extension.getURL('download.js');
+s.onload = function() {
+	this.remove();
+};
+(document.head || document.documentElement).appendChild(s);
