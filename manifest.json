@@ -1,0 +1,22 @@
+{
+	"name": "VK Music",
+	"version": "1.0",
+	"description": "Finna give you an easy way to dl them fires",
+	"manifest_version": 2,
+	
+	"web_accessible_resources": [
+		"images/icon.png"
+	],
+	
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	
+	"permissions": [
+		"background",
+		"tabs",
+		"downloads",
+		"*://vk.com/*"
+	]
+}
