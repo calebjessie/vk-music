@@ -4,6 +4,12 @@
 	"description": "Finna give you an easy way to dl them fires",
 	"manifest_version": 2,
 	
+	"icons": {
+		"16": "icons/16.png",
+		"48": "icons/48.png",
+		"128": "icons/128.png"
+	},
+	
 	"web_accessible_resources": [
 		"download.js",
 		"images/icon.png"
