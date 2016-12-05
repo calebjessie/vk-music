@@ -16,7 +16,7 @@ if(!document.getElementById('download_music')) {
 	// Finally, append element
 	btns.insertAdjacentHTML('beforeend', dl);
 
-	// Create script and inject
+	// Create script for download.js and inject into page
 	var s = document.createElement('script');
 	s.src = chrome.extension.getURL('download.js');
 	s.onload = function() {

@@ -1,6 +1,5 @@
 // Execute scripts
 
-// Error catching
 chrome.tabs.onUpdated.addListener (
 	function(tabID, changeInfo, tab) {
 		if ( changeInfo.status === "complete" ) {
